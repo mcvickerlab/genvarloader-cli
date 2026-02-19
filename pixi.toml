@@ -1,0 +1,16 @@
+[workspace]
+authors = ["d-laub <dlaub@ucsd.edu>"]
+channels = ["conda-forge"]
+name = "genvarloader-cli"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = "3.10.*"
+
+[pypi-dependencies]
+genvarloader-cli = { path = ".", editable = true }
+genvarloader = ">=0.20.0"
+cyclopts = ">=4.5.3, <5"

@@ -1,0 +1,15 @@
+[project]
+name = "genvarloader-cli"
+version = "0.0.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [{ name = "d-laub", email = "dlaub@ucsd.edu" }]
+requires-python = ">=3.10"
+dependencies = ["genvarloader>=0.20.0", "cyclopts>=4.5.3,<5"]
+
+[project.scripts]
+genvarloader = "genvarloader_cli.__main__:app"
+
+[build-system]
+requires = ["uv_build>=0.9.17,<0.10.0"]
+build-backend = "uv_build"
