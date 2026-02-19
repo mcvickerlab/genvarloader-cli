@@ -1,7 +1,7 @@
 [project]
 name = "genvarloader-cli"
 version = "0.0.0"
-description = "Add your description here"
+description = "Command line interface for genvarloader"
 readme = "README.md"
 authors = [{ name = "d-laub", email = "dlaub@ucsd.edu" }]
 requires-python = ">=3.10"
