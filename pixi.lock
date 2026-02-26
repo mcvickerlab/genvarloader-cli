@@ -74,7 +74,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/e7/04/a94ebfb4eaaa08db56725a40de2887e95de4e8641b9e902c311bfa00aa39/filelock-3.24.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/e6/ab/fb21f4c939bb440104cc2b396d3be1d9b7a9fd3c6c2a53d98c45b3d7c954/fsspec-2026.2.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/37/5a/9bea3e7361142f2cc78c57fe2a22479d25c712968e44d17a8259fa8f61fa/genoray-2.1.3-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/70/3e/cc5130ce8be368cfbc6270c752561f60898a7635c78cd6f0158f8dc98628/genvarloader-0.20.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+      - pypi: https://files.pythonhosted.org/packages/ab/d1/760d0632c85652ade872f3d29c2576b4de25ce91a2e274cf6602ecf0d354/genvarloader-0.21.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/ac/8e/0eccb528701273640dd4f13678a0c1352176166aecd1ee7f4fa29355132b/hirola-0.3.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/f0/0f/310fb31e39e2d734ccaa2c0fb981ee41f7bd5056ce9bc29b2248bd569169/humanfriendly-10.0-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/0e/61/66938bbb5fc52dbdf84594873d5b51fb1f7c7794e9c0f5bd885f30bc507b/idna-3.11-py3-none-any.whl
@@ -639,11 +639,12 @@ packages:
   - zstandard
   - genoray-cli>=0.2.0 ; extra == 'cli'
   requires_python: '>=3.10,<3.14'
-- pypi: https://files.pythonhosted.org/packages/70/3e/cc5130ce8be368cfbc6270c752561f60898a7635c78cd6f0158f8dc98628/genvarloader-0.20.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+- pypi: https://files.pythonhosted.org/packages/ab/d1/760d0632c85652ade872f3d29c2576b4de25ce91a2e274cf6602ecf0d354/genvarloader-0.21.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
   name: genvarloader
-  version: 0.20.0
-  sha256: 4482e1f6060c14284d5129c19732e907da97009c14f0363efd8a2eb0dcb0c696
+  version: 0.21.0
+  sha256: f6af3947af9d6611c8e181eab88a4268b94a913712b9d75b2e238e349d8cf663
   requires_dist:
+  - numpy
   - numba>=0.59.1
   - loguru
   - attrs
@@ -666,13 +667,14 @@ packages:
   - hirola>=0.3,<0.4
   - seqpro>=0.9
   - genoray>=2.1.1,<3
+  - genvarloader-cli>=0.1.0 ; extra == 'cli'
   requires_python: '>=3.10,<3.14'
 - pypi: ./
   name: genvarloader-cli
   version: 0.0.0
-  sha256: 09c9384d19aa001dffbb47bda494c45bbce8580ca440a5e100408e39a89b8cb8
+  sha256: f24316b3bb2c19afa68694a09294f5a392599d5cc8a854334c3d965f505423f8
   requires_dist:
-  - genvarloader>=0.20.0
+  - genvarloader>=0.21.0
   - cyclopts>=4.5.3,<5
   requires_python: '>=3.10'
 - pypi: https://files.pythonhosted.org/packages/ac/8e/0eccb528701273640dd4f13678a0c1352176166aecd1ee7f4fa29355132b/hirola-0.3.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
