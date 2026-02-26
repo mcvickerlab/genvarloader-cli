@@ -16,5 +16,3 @@ commitizen = ">=4.13.8,<5"
 
 [pypi-dependencies]
 genvarloader-cli = { path = ".", editable = true }
-genvarloader = ">=0.20.0"
-cyclopts = ">=4.5.3, <5"

@@ -23,6 +23,7 @@ def write(
     max_jitter: int | None = None,
     overwrite: bool = False,
     max_mem: int | str = "1G",
+    extend_to_length: bool = True,
 ):
     """Write a genvarloader dataset.
 
@@ -37,6 +38,11 @@ def write(
         max_jitter: Maximum jitter to add to the variants, in base pairs. Defaults to 0.
         overwrite: Overwrite the output dataset if it already exists.
         max_mem: Maximum memory to use for the dataset, in bytes. Defaults to 1GB. Can be a string like "1G" or "1000M".
+        extend_to_length: Whether to continue reading/writing variants until all haplotypes have a length at least as
+            long as the intervals in bed. Otherwise, deletions can cause the length of haplotypes to be less than the
+            intervals in bed. This can be disabled if having haplotypes shorter than the intervals is acceptable, in which
+            case they will be padded with reference bases when appropriate. Disabling this also reduces the amount of data
+            read/written and is faster to run.
     """
     import genvarloader as gvl
 
@@ -55,7 +61,17 @@ def write(
         with open(samples, "r") as f:
             samples = [line.strip() for line in f.readlines()]
 
-    gvl.write(output, bed, variants, bigwigs, samples, max_jitter, overwrite, max_mem)
+    gvl.write(
+        output,
+        bed,
+        variants,
+        bigwigs,
+        samples,
+        max_jitter,
+        overwrite,
+        max_mem,
+        extend_to_length,
+    )
 
 
 if __name__ == "__main__":

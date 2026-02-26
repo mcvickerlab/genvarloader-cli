@@ -5,7 +5,7 @@ description = "Command line interface for genvarloader"
 readme = "README.md"
 authors = [{ name = "d-laub", email = "dlaub@ucsd.edu" }]
 requires-python = ">=3.10"
-dependencies = ["genvarloader>=0.20.0", "cyclopts>=4.5.3,<5"]
+dependencies = ["genvarloader>=0.21.0", "cyclopts>=4.5.3,<5"]
 
 [project.scripts]
 genvarloader = "genvarloader_cli.__main__:app"
