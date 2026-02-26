@@ -1,6 +1,6 @@
 [project]
 name = "genvarloader-cli"
-version = "0.0.0"
+version = "0.1.0"
 description = "Command line interface for genvarloader"
 readme = "README.md"
 authors = [{ name = "d-laub", email = "dlaub@ucsd.edu" }]
@@ -13,3 +13,19 @@ genvarloader = "genvarloader_cli.__main__:app"
 [build-system]
 requires = ["uv_build>=0.9.17,<0.10.0"]
 build-backend = "uv_build"
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "$version"
+version_scheme = "semver2"
+version_provider = "pep621"
+update_changelog_on_bump = true
+major_version_zero = true
+allowed_prefixes = [
+    "Merge",
+    "Revert",
+    "Pull request",
+    "fixup!",
+    "squash!",
+    "[pre-commit.ci]",
+]
