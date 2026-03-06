@@ -1,7 +1,7 @@
 name: Bump and release
 
 on:
-  workflow_dispatch:
+  workflow_dispatch
 
 jobs:
   bump-version:
